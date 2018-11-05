@@ -47,7 +47,7 @@ plt.plot(X, linear_reg.predict(X))
 
 #----------------------Visualising Polynomial Regression results
 #plt.scatter(X, y)
-plt.plot(X, y_pred, c='blue')
+plt.plot(X, poly_linear_reg.predict(polynmial.fit_transform(X)), c='blue')
 plt.show()
 
 
