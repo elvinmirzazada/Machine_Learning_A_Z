@@ -51,8 +51,10 @@ plt.plot(X, poly_linear_reg.predict(polynmial.fit_transform(X)), c='blue')
 plt.show()
 
 
+# predicting
+new_pred_lin = linear_reg.predict(6.1)
 
-
+new_pred_poly = poly_linear_reg.predict(polynmial.fit_transform(6.1))
 
 
 
