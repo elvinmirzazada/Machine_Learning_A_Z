@@ -58,10 +58,10 @@ regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
 regressor_OLS.summary()
 
 
-def backwardElimination(x, sl):
-    numVars = len(X[0])
-    for i in range(0, numVars):
-        
+#def backwardElimination(x, sl):
+#    numVars = len(X[0])
+#    for i in range(0, numVars):
+#        
 
 
 

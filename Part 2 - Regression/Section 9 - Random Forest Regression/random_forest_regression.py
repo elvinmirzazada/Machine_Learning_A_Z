@@ -8,7 +8,7 @@ y = dataset.iloc[:, -1].values
 
 #_-----------------------Fitting Random Forest regression
 from sklearn.ensemble import RandomForestRegressor
-rand_reg = RandomForestRegressor(n_estimators = 100, criterion = 'mse', random_state = 0)
+rand_reg = RandomForestRegressor(n_estimators = 300, criterion = 'mse', random_state = 0)
 rand_reg.fit(X, y)
 acc = rand_reg.score(X, y)    
 y_pred = rand_reg.predict((6.5))
@@ -18,3 +18,4 @@ y_pred = rand_reg.predict((6.5))
 plt.scatter(X, y, color='red')
 plt.plot(X, rand_reg.predict(X), color='blue')
 plt.show()
+
