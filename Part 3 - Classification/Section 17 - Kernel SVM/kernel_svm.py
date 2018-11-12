@@ -19,7 +19,7 @@ X_test = sc.transform(X_test)
 
 #-------------------Fitting SVM on traindata
 from sklearn.svm import SVC 
-svc = SVC(kernel='linear')
+svc = SVC(kernel='rbf', random_state=0)
 svc.fit(X_train, y_train)
 acc = svc.score(X_train, y_train)
 y_pred = svc.predict(X_test)

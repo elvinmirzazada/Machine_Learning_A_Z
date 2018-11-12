@@ -7,7 +7,7 @@ X = dataset.iloc[:, 2:-1].values
 y = dataset.iloc[:, -1].values
 
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, 
                                                     random_state = 0, shuffle = True)
 
 
@@ -17,9 +17,9 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
-#-------------------Fitting SVM on traindata
-from sklearn.svm import SVC 
-svc = SVC(kernel='linear')
+#-------------------Fitting Decision Tree on traindata
+from sklearn.tree import DecisionTreeClassifier 
+svc = DecisionTreeClassifier()
 svc.fit(X_train, y_train)
 acc = svc.score(X_train, y_train)
 y_pred = svc.predict(X_test)
@@ -55,7 +55,7 @@ plt.title = 'Training Set'
 plt.show()
 
 
-#-------------------Visualising Test4 results
+#-------------------Visualising Test results
 from matplotlib.colors import ListedColormap
 X_set, y_set = X_test, y_test
 

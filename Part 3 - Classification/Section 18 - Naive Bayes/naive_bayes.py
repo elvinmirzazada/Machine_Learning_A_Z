@@ -17,9 +17,9 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
-#-------------------Fitting SVM on traindata
-from sklearn.svm import SVC 
-svc = SVC(kernel='linear')
+#-------------------Fitting NaiveBayes on traindata
+from sklearn.naive_bayes import GaussianNB 
+svc = GaussianNB()
 svc.fit(X_train, y_train)
 acc = svc.score(X_train, y_train)
 y_pred = svc.predict(X_test)
@@ -55,7 +55,7 @@ plt.title = 'Training Set'
 plt.show()
 
 
-#-------------------Visualising Test4 results
+#-------------------Visualising Test results
 from matplotlib.colors import ListedColormap
 X_set, y_set = X_test, y_test
 
